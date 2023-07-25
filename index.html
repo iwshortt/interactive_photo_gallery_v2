@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>My Interactive Photo Gallery</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <input class="search-bar" type="text" id="search" name="user_search" onkeyup="searchBar()" placeholder="Search">
+            <div class="thumb-grid">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(1)" src="img/thumbnails/01.jpg" alt="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(2)" src="img/thumbnails/02.jpg" alt="The lake was so calm today. We had a great view of the snow on the mountains from here.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(3)" src="img/thumbnails/03.jpg" alt="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(4)" src="img/thumbnails/04.jpg" alt="It was amazing to see an iceberg up close, it was so cold but didn’t snow today.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(5)" src="img/thumbnails/05.jpg" alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(6)" src="img/thumbnails/06.jpg" alt="Fall is coming, I love when the leaves on the trees start to change color.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(7)" src="img/thumbnails/07.jpg" alt="I drove past this plantation yesterday, everything is so green!">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(8)" src="img/thumbnails/08.jpg" alt="My summer vacation to the Oregon Coast. I love the sandy dunes!">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(9)" src="img/thumbnails/09.jpg" alt="We enjoyed a quiet stroll down this countryside lane.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(10)" src="img/thumbnails/10.jpg" alt="Sunset at the coast! The sky turned a lovely shade of orange.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(11)" src="img/thumbnails/11.jpg" alt="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+                <img class="hover-shadow" onclick="openLightbox();currentSlide(12)" src="img/thumbnails/12.jpg" alt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+            </div>
+            <div id="myLightbox" class="lightbox">
+                <span class="close cursor" onclick="closeLightbox()">&times;</span>
+                <div class="lightbox-content">
+                    <div class="mySlides">
+                        <div class="slide-count">1 /12</div>
+                        <img class="light-img" src="img/01.jpg" alt="Hay Bales">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">2 /12</div>
+                        <img class="light-img" src="img/02.jpg" alt="Lake">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">3 /12</div>
+                        <img class="light-img" src="img/03.jpg" alt="Canyon">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">4 /12</div>
+                        <img class="light-img" src="img/04.jpg" alt="Iceberg">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">5 /12</div>
+                        <img class="light-img" src="img/05.jpg" alt="Desert">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">6 /12</div>
+                        <img class="light-img" src="img/06.jpg" alt="Fall">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">7 /12</div>
+                        <img class="light-img" src="img/07.jpg" alt="Plantation">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">8 /12</div>
+                        <img class="light-img" src="img/08.jpg" alt="Dunes">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">9 /12</div>
+                        <img class="light-img" src="img/09.jpg" alt="Countryside Lane">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">10 /12</div>
+                        <img class="light-img" src="img/10.jpg" alt="Sunset">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">11 /12</div>
+                        <img class="light-img" src="img/11.jpg" alt="Cave">
+                    </div>
+                    <div class="mySlides">
+                        <div class="slide-count">12 /12</div>
+                        <img class="light-img" src="img/12.jpg" alt="Bluebells">
+                    </div>
+
+                    <!-- Previous / Next Controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption Text -->
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+                    <div class="thumb-grp">
+                        <!-- Thumbnail Image Controls -->
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/01.jpg" onclick="currentSlide(1)" alt="Hay Bales">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/02.jpg" onclick="currentSlide(2)" alt="Lake">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/03.jpg" onclick="currentSlide(3)" alt="Canyon">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/04.jpg" onclick="currentSlide(4)" alt="Iceberg">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/05.jpg" onclick="currentSlide(5)" alt="Desert">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/06.jpg" onclick="currentSlide(6)" alt="Fall">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/07.jpg" onclick="currentSlide(7)" alt="Plantation">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/08.jpg" onclick="currentSlide(8)" alt="Dunes">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/09.jpg" onclick="currentSlide(9)" alt="Countryside Lane">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/10.jpg" onclick="currentSlide(10)" alt="Sunset">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/11.jpg" onclick="currentSlide(11)" alt="Cave">
+                        </div>
+                        <div class="row">
+                            <img class="thumb-demo" src="img/thumbnails/12.jpg" onclick="currentSlide(12)" alt="Bluebells">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

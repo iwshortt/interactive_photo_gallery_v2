@@ -1,0 +1,153 @@
+// ======================================
+//  Base Styles
+// ======================================
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.wrapper {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+// ======================================
+//  Input Styles
+// ======================================
+
+// Search Bar
+.search-bar {
+    width: min(75ch, 95%);
+    height: 3rem;
+    margin: 1.5rem auto;
+    padding: 1rem .5rem;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+
+// ======================================
+//  Grid Styles
+// ======================================
+
+// Grid
+.thumb-grid {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+    grid-gap: 25px;
+    // line-height: 0%;
+}
+
+// ======================================
+//  Image Styles
+// ======================================
+
+// Images
+.thumb-grid img {
+    float: left;
+    margin: 0;
+    border-radius: 5px;
+}
+
+// ======================================
+//  Lightbox Styles
+// ======================================
+
+// Lightbox
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+.lightbox-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+}
+.thumb-grp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+// Close Button
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+// Images
+.light-img {
+    width: 100%;
+}
+.thumb-demo {
+    width: 115px;
+    height: 57.5px;
+}
+
+// Slides
+.mySlides {
+    display: none;
+}
+
+// Next and Prev Buttons
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+// Slide Count "1/6"
+.slide-count {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+// Caption Text
+.caption-container {
+    text-align: center;
+    padding: 2px 16px;
+    background-color: black;
+    color: white;
+}
