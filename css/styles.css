@@ -12,6 +12,10 @@ body {
   margin: 0 auto;
 }
 
+img:hover:not(.light-img) {
+  cursor: pointer;
+}
+
 .search-bar {
   width: min(75ch, 95%);
   height: 3rem;
@@ -61,6 +65,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: black;
 }
 
 .close {
@@ -79,11 +84,14 @@ body {
 
 .light-img {
   width: 100%;
+  display: block;
 }
 
 .thumb-demo {
   width: 115px;
   height: 57.5px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .mySlides {
